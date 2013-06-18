@@ -1,38 +1,37 @@
 extends layout
 
 block content
-	div(data-role="page", data-title="Welcome to Jobsville.ph", id="splash")
+	//div(data-role="page", data-title="Welcome to Jobsville.ph", id="splash")
 
 	div(data-role="page", data-title="Welcome to Jobsville.ph", id="home") 
-		div(data-role="panel", data-position="left", data-display="reveal", id="menupanel", class="panel")
-			include widget/menupanel
-
-		div(data-role="panel", data-position="right", data-display="reveal", id="chatpanel", class="panel chatpanel")
-			include widget/chatpanel
-
-		div(data-role="header", data-theme="c", class="header", data-position="fixed", data-position-fixed="true")
+		include panels/menu
+		include panels/chat
+		//data-position="fixed", 
+		div(data-role="header", data-theme="c", class="header", data-position-fixed="true")
 			h1 Profile
 			a(data-theme="c", href="#menupanel", data-role="button", data-icon="bars", data-role="button", data-iconpos="notext")
 			a(data-theme="c", href="#chatpanel", data-role="button", data-icon="chat", data-role="button", data-iconpos="notext")
 
 		div(data-role="content", class="no-padding")
-			div.bannerInner
+			include pages/profile
 
-			div.photoOuter
-				div.photoInner
+	div(data-role="page", data-title="Jobs Wall : Jobsville.ph", id="wall") 
+		include panels/menu
+		include panels/chat
 
-			div.profileDetails
-				span.profileName Jinggo Cleofe Villamor
-				span.profilePosition Web Developer
+		div(data-role="header", data-theme="c", class="header", data-position="fixed", data-position-fixed="true")
+			h1 Jobs Wall
+			a(data-theme="c", href="#menupanel", data-role="button", data-icon="bars", data-role="button", data-iconpos="notext")
+
+		div(data-role="content", class="no-padding")
 			
-			div.clear
+	div(data-role="page", data-title="Friends Wall : Jobsville.ph", id="friends") 
+		include panels/menu
+		include panels/chat
 
-			div.resumeProgress
-				span Resume Progress 
-				span 80%
+		div(data-role="header", data-theme="c", class="header", data-position="fixed", data-position-fixed="true")
+			h1 Friends Wall
+			a(data-theme="c", href="#menupanel", data-role="button", data-icon="bars", data-role="button", data-iconpos="notext")
 
-			div.profWidget
-				include resume/basic
-				include resume/education
-				include resume/work
+		div(data-role="content", class="no-padding")
 			

@@ -269,6 +269,9 @@ a {
 .menupanel a i.logout {
   background: #ffffff url(../images/logout.png) no-repeat center;
 }
+.menupanel a.active {
+  background: #273747;
+}
 .ui-panel-inner {
   padding: 0;
 }
