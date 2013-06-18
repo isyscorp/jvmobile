@@ -151,5 +151,32 @@ a {
 }
 .ui-panel-inner {
   color: #FFF;
-  text-shadow: 0 /*{c-body-shadow-x}*/ 1px /*{c-body-shadow-y}*/ 0 /*{c-body-shadow-radius}*/ #000000 /*{c-body-shadow-color}*/;
+  text-shadow: 0;
+}
+.clear {
+  clear: both;
+}
+.profWidget {
+  min-height: 300px;
+  padding: 10px;
+}
+.profHeader {
+  font-size: 1.3em;
+  color: #828282;
+  font-weight: bolder;
+  margin-bottom: .3em;
+}
+.fldRow {
+  margin-bottom: .3em;
+}
+.fldRow .fldLbl {
+  width: 45%;
+  float: left;
+  text-indent: 1.5em;
+  color: #828282;
+  font-weight: bolder;
+}
+.fldRow .fldTxt {
+  width: 45%;
+  float: left;
 }
