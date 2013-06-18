@@ -128,3 +128,10 @@ a {
   height: 90px;
   background: #ddd;
 }
+.panel {
+  background: #2c3e50;
+}
+.ui-panel-inner {
+  color: #FFF;
+  text-shadow: 0 /*{c-body-shadow-x}*/ 1px /*{c-body-shadow-y}*/ 0 /*{c-body-shadow-radius}*/ #000000 /*{c-body-shadow-color}*/;
+}
