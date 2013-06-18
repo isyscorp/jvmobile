@@ -1,14 +1,16 @@
 extends layout
 
 block content
-	div(data-role="page", data-title="Welcome to Jobsville.ph") 
+	div(data-role="page", data-title="Welcome to Jobsville.ph", id="splash")
+
+	div(data-role="page", data-title="Welcome to Jobsville.ph", id="home") 
 		div(data-role="panel", data-position="left", data-display="reveal", id="menupanel", class="panel")
 			include widget/menupanel
 
 		div(data-role="panel", data-position="right", data-display="reveal", id="chatpanel", class="panel chatpanel")
 			include widget/chatpanel
 
-		div(data-role="header", data-theme="c", class="header")
+		div(data-role="header", data-theme="c", class="header", data-position="fixed", data-position-fixed="true")
 			h1 Profile
 			a(data-theme="c", href="#menupanel", data-role="button", data-icon="bars", data-role="button", data-iconpos="notext")
 			a(data-theme="c", href="#chatpanel", data-role="button", data-icon="chat", data-role="button", data-iconpos="notext")
