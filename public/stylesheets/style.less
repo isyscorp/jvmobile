@@ -1,3 +1,6 @@
+@gray: #828282;
+@blue: #2980b9;
+
 body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background: #f9f9f9;
@@ -103,7 +106,6 @@ a {
 .logoHome
 {
 	text-align: center;
-	margin-top: -20px;
 }
 
 .small11
@@ -194,7 +196,6 @@ a {
 	span.profilePosition {
 		font-size: 0.9em;
 	}
-	
 }
 
 .profileDetails
@@ -221,7 +222,6 @@ a {
 
 .profWidget
 {
-	min-height: 300px;
 	padding: 10px;
 }
 
@@ -250,5 +250,39 @@ a {
 	{
 		width: 45%;
 		float: left;
+		text-indent: 1.5em;
 	}
+
+	.fldTxt2
+	{
+		text-indent: 1.5em;
+	}
+}
+
+.fldRowDivide
+{
+	margin: 15px 20px 15px 20px;
+	border-bottom: 1px solid #ddd;
+}
+
+.resumeProgress
+{
+	font-size: 1.8em;
+	text-align: center;
+	color: @gray;
+	font-size: 1.6em;
+	font-weight: bolder;
+	margin-top: 10px;
+
+	span:last-child 
+	{
+		color: @blue;
+	}
+}
+
+.divide
+{
+	border-bottom: 1px solid #ddd;
+	height: 0px;
+	margin: 10px 0;
 }

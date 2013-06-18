@@ -76,7 +76,6 @@ a {
 }
 .logoHome {
   text-align: center;
-  margin-top: -20px;
 }
 .small11 {
   font-size: 11px;
@@ -157,7 +156,6 @@ a {
   clear: both;
 }
 .profWidget {
-  min-height: 300px;
   padding: 10px;
 }
 .profHeader {
@@ -179,4 +177,28 @@ a {
 .fldRow .fldTxt {
   width: 45%;
   float: left;
+  text-indent: 1.5em;
+}
+.fldRow .fldTxt2 {
+  text-indent: 1.5em;
+}
+.fldRowDivide {
+  margin: 15px 20px 15px 20px;
+  border-bottom: 1px solid #ddd;
+}
+.resumeProgress {
+  font-size: 1.8em;
+  text-align: center;
+  color: #828282;
+  font-size: 1.6em;
+  font-weight: bolder;
+  margin-top: 10px;
+}
+.resumeProgress span:last-child {
+  color: #2980b9;
+}
+.divide {
+  border-bottom: 1px solid #ddd;
+  height: 0px;
+  margin: 10px 0;
 }
