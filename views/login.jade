@@ -1,0 +1,50 @@
+extends layout
+
+block content
+	div(data-role="page")
+		div(data-role="content", class="no-padding")
+			div.logoHome
+				img(src="/images/logo_home.png")
+
+			div.formWrap     
+				input(id="text-basic", class="flat-tb",  placeholder="E-mail Address")
+				input(id="text-basic", placeholder="Password")
+				button(class="button", data-corners="false", data-shadow="false", data-border="false") Login
+				a(href="#recover", class="small11 gray", data-transition="slide") Lost your password?
+
+			div.buttonsWrap
+				a(data-role="button", data-corners="false", data-shadow="false", href="#register", data-transition="slide", class="button btn-red") Register New Account
+				button(class="button", data-corners="false", data-shadow="false", data-border="false") or signup with Facebook
+
+	div(data-role="page", id="register")
+		div(data-role="content", class="no-padding")
+			div.logo
+				img(src="/images/logo.png")
+
+			div.formHeader
+				span Signup Now for Free
+
+			div.formWrap2     
+				input(id="text-basic", placeholder="First Name")
+				input(id="text-basic", placeholder="Middle Name")
+				input(id="text-basic", placeholder="Last Name")
+				input(id="text-basic", placeholder="Position Desired")
+				input(id="text-basic", placeholder="Mobile Number")
+				input(id="text-basic", placeholder="E-mail Address")
+			
+			div.buttonsWrap	
+				button(class="button", data-corners="false", data-shadow="false", data-border="false") Sign Me Up
+
+	div(data-role="page", id="recover")
+		div(data-role="content", class="no-padding")
+			div.logo
+				img(src="/images/logo.png")
+
+			div.formHeader
+				span Password Recovery
+
+			div.formWrap2     
+				input(id="text-basic", class="flat-tb",  placeholder="E-mail Address")
+			
+			div.buttonsWrap	
+				button(class="button", data-corners="false", data-shadow="false", data-border="false") Recover Password

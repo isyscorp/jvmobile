@@ -1,0 +1,21 @@
+extends layout
+
+block content
+	div(data-role="page", data-title="Welcome to Jobsville.ph") 
+		div(data-role="panel", data-position="left", data-display="push", id="menupanel", class="panel")
+			p Menu Panel
+
+		div(data-role="panel", data-position="right", data-display="push", id="chatpanel", class="panel")
+			p Chat Panel
+
+		div(data-role="header", data-theme="c", class="header")
+			h1 Profile
+			a(data-theme="c", href="#menupanel", data-role="button", data-icon="bars", data-role="button", data-iconpos="notext")
+			a(data-theme="c", href="#chatpanel", data-role="button", data-icon="bars", data-role="button", data-iconpos="notext")
+
+		div(data-role="content", class="no-padding")
+			div.photoInner
+
+
+
+			
