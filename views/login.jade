@@ -6,11 +6,12 @@ block content
 			div.logoHome
 				img(src="/images/logo_home.png")
 
-			div.formWrap     
-				input(id="text-basic", class="flat-tb",  placeholder="E-mail Address")
-				input(id="text-basic", placeholder="Password")
-				button(class="button", data-corners="false", data-shadow="false", data-border="false") Login
-				a(href="#recover", class="small11 gray", data-transition="slide") Lost your password?
+			form(action="/users/login", method="post", class="form", data-ajax="false")
+				div.formWrap     
+					input(id="text-basic", class="flat-tb",  placeholder="E-mail Address", name="email")
+					input(id="text-basic", placeholder="Password", name="password", type="password")
+					button(class="button", data-corners="false", data-shadow="false", data-border="false") Login
+					a(href="#recover", class="small11 gray", data-transition="slide") Lost your password?
 
 			div.buttonsWrap
 				a(data-role="button", data-corners="false", data-shadow="false", href="#register", data-transition="slide", class="button btn-red") Register New Account

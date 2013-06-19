@@ -3,6 +3,7 @@ extends layout
 block content
 	//div(data-role="page", data-title="Welcome to Jobsville.ph", id="splash")
 
+	// Home Page
 	div(data-role="page", data-title="Welcome to Jobsville.ph", id="home") 
 		include panels/menu
 		include panels/chat
@@ -15,6 +16,7 @@ block content
 		div(data-role="content", class="no-padding")
 			include pages/profile
 
+	// Wall
 	div(data-role="page", data-title="Jobs Wall : Jobsville.ph", id="wall") 
 		include panels/menu
 		include panels/chat
@@ -24,7 +26,8 @@ block content
 			a(data-theme="c", href="#menupanel", data-role="button", data-icon="bars", data-role="button", data-iconpos="notext")
 
 		div(data-role="content", class="no-padding")
-			
+	
+	// Friends
 	div(data-role="page", data-title="Friends Wall : Jobsville.ph", id="friends") 
 		include panels/menu
 		include panels/chat
@@ -34,4 +37,27 @@ block content
 			a(data-theme="c", href="#menupanel", data-role="button", data-icon="bars", data-role="button", data-iconpos="notext")
 
 		div(data-role="content", class="no-padding")
+
+	// Edit Education
+	div(data-role="page", data-title="Edit Basic Info : Jobsville.ph", id="edit-basicinfo")
+		div(data-role="header", data-theme="c", class="header", data-position="fixed", data-position-fixed="true")
+			h1 Update Profile
+			a(data-theme="c", href="#", data-role="button", data-icon="arrow-l", data-role="button", data-rel="back", data-iconpos="notext")
+
+		div(data-role="content", class="no-padding")
+			div.formHeader.marginTop10
+				span Basic Info
+
+			div.formWrap2    
+				input(id="text-basic", placeholder="First Name")
+				input(id="text-basic", placeholder="Middle Name")
+				input(id="text-basic", placeholder="Last Name")
+				input(id="text-basic", placeholder="Position Desired")
+				input(id="text-basic", placeholder="Mobile Number")
+				input(id="text-basic", placeholder="E-mail Address")
+			
+			div.buttonsWrap	
+				button(class="button", data-corners="false", data-shadow="false", data-border="false") Update
+
+
 			

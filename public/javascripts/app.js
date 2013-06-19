@@ -1,27 +1,52 @@
-function hideSplash() {
-  //$.mobile.changePage("#home", "fade");
+var procJSON = {
+	'success' : function(data, form)
+	{
+
+	},
+	'retry' : function(data, form)
+	{
+		$(form).trigger('reset');
+		alert(data.message);
+	},
+	'forward' : function(data, form)
+	{
+		location.href=data.url;
+	}
 }
 
 $(document).bind("pageinit", function(){
-	//hideSplash();
-	/*
-	$('#menupanel').on('click', 'a', function(e){
+	
+	$('#menupanel').on('tap','a',function(e){
+		//$(e.target).addClass('active');
+	});
+
+	$('.form').submit(function(e){
 		e.preventDefault();
-		var page = $(this).prop('href');
-
-		$.mobile.changePage("#wall", "slide");
+		$.mobile.showPageLoadingMsg();
 		
-		$(this).addClass('active');
-		$(this).parent().siblings().find('a').removeClass('active');
-		console.log('triggered');
+		var form = this;
+		var action = $(form).prop('action');
+		var dt = $(form).serializeArray();
+
+		$.ajax({
+			url: action,
+			dataType: 'json',
+			type: 'post',
+			data: dt,
+			success: function(data)
+			{
+				procJSON[data.action](data,form);
+				$.mobile.hidePageLoadingMsg();
+			},
+			error: function(xhr)
+			{
+
+			}
+		})
 	})
-*/
+
 });
 
-$("#home").on("pageinit",function(e){
-	console.log('home init');
-});
-
-$("#wall").on("pageinit",function(e){
-	console.log('wall init');
-})
+function hideSplash() {
+  //$.mobile.changePage("#home", "fade");
+}

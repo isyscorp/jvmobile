@@ -1,52 +1,61 @@
 div.profHeader Basic Information
+	a(href="#edit-basicinfo", data-transition="slide")
+		span.edit 
+		| Edit
+
 div.fldRow
 	div.fldLbl Code Name
-	div.fldTxt jingcleovil
+	div.fldTxt #{details.nickname}
 	div.clear
 
 div.fldRow
 	div.fldLbl Birthdate
-	div.fldTxt March 09, 1983
+	div.fldTxt #{details.birthdate}
 	div.clear
 
 div.fldRow
 	div.fldLbl Age
-	div.fldTxt 32
+	div.fldTxt #{details.age}
 	div.clear
 
 div.fldRow
 	div.fldLbl Gender
-	div.fldTxt Male
+	div.fldTxt.properCase #{details.gender}
 	div.clear
 
 div.fldRow
 	div.fldLbl Country
-	div.fldTxt Philippines
+	div.fldTxt #{details.country_name}
 	div.clear
 
 div.fldRow
 	div.fldLbl Location
-	div.fldTxt Masbate
+	div.fldTxt #{details.location}
 	div.clear
 
 div.fldRow
 	div.fldLbl Civil Status
-	div.fldTxt Single
+	div.fldTxt #{details.civilstatus}
 	div.clear
 
 div.fldRow
 	div.fldLbl Height
-	div.fldTxt 180 CM
+	div.fldTxt #{details.height} CM
+	div.clear
+
+div.fldRow
+	div.fldLbl Weight
+	div.fldTxt #{details.weight} KG
 	div.clear
 
 div.fldRow
 	div.fldLbl Citizenship
-	div.fldTxt Filipino
+	div.fldTxt #{details.citizenship} 
 	div.clear
 
 div.fldRow
 	div.fldLbl Religion
-	div.fldTxt2 Roman Catholic
+	div.fldTxt2 #{details.religion} 
 	div.clear
 
 div.divide
